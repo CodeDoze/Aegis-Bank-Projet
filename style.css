@@ -1,0 +1,220 @@
+/* ============================
+   VARIABLES
+============================ */
+
+@import url("./styles/all-variables.css");
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100dvh;      /* ✅ hauteur stricte */
+  overflow: hidden;    /* ✅ empêche tout scroll */
+  font-size: 62.5%;    /* 1rem = 10px */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-image: url(./resources/img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  
+  
+}
+
+/* ============================
+HEADER
+============================ */
+
+header {
+  height: 5.5rem;       /* ✅ compact */
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  flex: 1;
+  min-height: 0;        /* ✅ permet la compression */
+  overflow: hidden;     /* ✅ empêche le scroll interne */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.header__logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-left: auto;
+}
+
+.header__link {
+  color: var(--color-link);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.header__link:hover {
+  color: var(--color-link-hover);
+}
+
+.header__burger {
+  color: var(--text-color);
+  background: none;
+  border: 1px solid var(--text-color);
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+/* ============================
+   MAIN — SANS SCROLL
+============================ */
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  flex: 1;
+  min-height: 0;
+
+  padding: 0 1rem;
+  gap: 0.6rem;          /* ✅ compact */
+}
+
+/* TITRE */
+.main__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--second-primary);
+}
+
+/* TAGLINE */
+.main__tagline {
+  font-size: 1.1rem;
+  line-height: 1.2;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* CARD PROMO */
+.card-promo {
+  background: rgba(255, 255, 255, 0.135);
+  padding: 1rem;
+  border-radius: 0.8rem;
+  max-width: 26rem;
+}
+
+.card-promo__text {
+  font-size: 1.1rem;
+  margin: 0 0 0.8rem 0;
+}
+
+/* BOUTON */
+.btn-download-app a {
+  padding: 0.6rem 1.2rem;
+  font-size: 1.2rem;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;  
+  transition: background 0.2s ease;
+ 
+}
+
+.btn-download-app a:hover {
+  background: var(--color-primary-hover);
+}
+
+/* ============================
+   SOCIAL LINKS
+============================ */
+
+.social-link {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-link a {
+  display: inline-flex;
+  transition: transform 0.2s ease;
+}
+
+.social-link a:hover {
+  transform: scale(1.15);
+}
+
+/* ============================
+   FOOTER ULTRA COMPACT
+============================ */
+
+footer {
+  height: 4.5rem;        /* ✅ ultra compact */
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding: 0 0.5rem;
+}
+
+/* ✅ Liens légaux sur une seule ligne */
+.footer__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+
+/* ✅ Liens minuscules */
+.footer__link {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.footer__link:hover {
+  color: var(--color-primary-hover);
+}
+
+/* ✅ Séparateur compact */
+.footer__sep {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* ✅ Copyright compact */
+.footer__copy {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin: 0;
+}

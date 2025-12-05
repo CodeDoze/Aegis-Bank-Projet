@@ -1,0 +1,20 @@
+/* 1. Déclaration des polices */
+@font-face {
+    font-family: "OrbitronBold";
+    src: url("../resources/font/Orbitron-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 2. Variables typographiques */
+:root {
+    --font-main: "OrbitronBold", sans-serif;
+    --font-body: "Inter", sans-serif;
+
+    --font-size-base: 1.6rem;
+    --font-size-small: 1.2rem;
+    --font-size-logo: 2rem;
+    --font-size-nav: 1.2rem;
+    --font-size-title: 1.8rem;
+    --font-size-big-title: 2.4rem;
+}

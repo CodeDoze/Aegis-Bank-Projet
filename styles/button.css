@@ -1,0 +1,26 @@
+.btn{
+    font-family:'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--second-color);
+    padding: 0.5rem 1rem;
+    background-color:var(--main-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px var(--bg-color);
+    border-radius: 20px;
+
+
+}
+.btn:hover{
+    background-color: var(--bg-color);
+    box-shadow: 0 2px var(--bg-color);
+    top: 2px;
+    
+}
+.btn:active{
+    box-shadow: 0 0px var(--bg-color);
+    top: 4px;
+}
