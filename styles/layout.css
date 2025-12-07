@@ -1,6 +1,27 @@
-.link{
-    text-decoration: none;
-    color: var(--second-color);
-    font-family: var();
+/* ============================
+   LAYOUT GLOBAL
+============================ */
+
+.container {
+  width: min(120rem, 100%);
+  margin: 0 auto;
+  padding: 0 var(--padding-md);
 }
 
+/* Helpers flex */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Section générique */
+.section {
+  padding: var(--padding-main-y) 0;
+}

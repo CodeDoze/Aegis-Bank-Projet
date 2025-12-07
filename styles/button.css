@@ -1,26 +1,53 @@
-.btn{
-    font-family:'Arial', sans-serif;
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--second-color);
-    padding: 0.5rem 1rem;
-    background-color:var(--main-color);
-    outline: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    box-shadow: 0 4px var(--bg-color);
-    border-radius: 20px;
+/* ============================
+   BOUTONS
+============================ */
 
+.btn {
+  font-family: var(--font-body);
+  font-size: var(--font-size-btn);
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
 
+/* Bouton principal */
+.btn--primary {
+  background: var(--gradient-primary);
+  color: var(--second-color);
+  box-shadow: 0 4px 0 rgba(77, 163, 255, 0.25);
 }
-.btn:hover{
-    background-color: var(--bg-color);
-    box-shadow: 0 2px var(--bg-color);
-    top: 2px;
-    
+
+.btn--primary:hover {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 rgba(77, 163, 255, 0.25);
 }
-.btn:active{
-    box-shadow: 0 0px var(--bg-color);
-    top: 4px;
+
+.btn--primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 var(--color-active);
+}
+
+/* Bouton ghost */
+.btn--ghost {
+  background: transparent;
+  color: var(--color-link);
+  border: 1px solid rgba(165, 200, 255, 0.4);
+}
+
+.btn--ghost:hover {
+  background: rgba(77, 163, 255, 0.08);
+}
+
+/* Bouton large */
+.btn--lg {
+  padding: 1rem 2.4rem;
 }

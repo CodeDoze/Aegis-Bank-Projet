@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,19 +12,19 @@
   <!-- ============================
        HEADER
   ============================= -->
-  <header>
+  <header aria-label="En-tête principal">
     <div class="header__container">
 
       <!-- Logo -->
       <a class="header__logo link" href="index.html">Aegis Bank</a>
 
-      <!-- Connexion / Inscription -->
-      <nav class="header__nav">
-        <a class="header__link btn" href="#">Se connecter</a>
-        <a class="header__link btn" href="#">S'inscrire</a>
-      </nav>
+      <!-- Actions utilisateur (PAS une nav) -->
+      <div class="header__actions" role="group" aria-label="Actions utilisateur">
+        <a class="header__link btn btn--ghost" href="#">Se connecter</a>
+        <a class="header__link btn btn--primary" href="#">S'inscrire</a>
+      </div>
 
-      <!-- Menu burger -->
+      <!-- Menu burger (SVG d’origine) -->
       <button class="header__burger" aria-label="Ouvrir le menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
              viewBox="0 0 24 24">
@@ -41,92 +40,102 @@
   <!-- ============================
        MAIN
   ============================= -->
-  <main class="main">
+  <main id="main" aria-labelledby="hero-title">
+    <div class="main__container">
 
-    <h1 class="main__title">La néobanque éthique & transparente</h1>
+      <h1 id="hero-title" class="main__title">
+        La néobanque éthique & transparente
+      </h1>
 
-    <p class="main__tagline">
-      Tu crées, tu partages, tu avances.<br>
-      Aegis Bank t'offre des services clairs,<br>
-      pensés pour ton univers.
-    </p>
+      <p class="main__tagline">
+        Tu crées, tu partages, tu avances. Aegis Bank te propose une expérience
+        claire, fluide et pensée pour ton univers.
+      </p>
 
-    <div class="card-promo">
-      <p class="card-promo__text">20 euros offerts<br>Mars 2026</p>
+      <!-- Card promo -->
+      <section class="card-promo" aria-label="Offre de bienvenue">
+        <p class="card-promo__text">
+          20&nbsp;euros offerts<br>
+          Mars&nbsp;2026
+        </p>
 
-      <div class="btn-download-app btn">
-        <a href="#">Télécharger l'app</a>
-      </div>
+        <div class="btn-download-app btn btn--primary btn--lg">
+          <a href="#">Télécharger l'app</a>
+        </div>
+      </section>
+
+      <!-- Réseaux sociaux -->
+      <section aria-label="Liens vers les réseaux sociaux">
+        <ul class="social-link">
+
+          <!-- Telegram -->
+          <li>
+            <a href="#" aria-label="Telegram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                   viewBox="0 0 256 256">
+                <defs>
+                  <linearGradient id="tg" x1="50%" x2="50%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#2aabee"/>
+                    <stop offset="100%" stop-color="#229ed9"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="128" cy="128" r="128" fill="url(#tg)"/>
+                <path fill="#fff"
+                  d="M57.94 126.648q55.98-24.384 74.64-32.152c35.56-14.786 42.94-17.354 47.76-17.441c1.06-.017 3.42.245 4.96 1.49c1.28 1.05 1.64 2.47 1.82 3.467c.16.996.38 3.266.2 5.038c-1.92 20.24-10.26 69.356-14.5 92.026c-1.78 9.592-5.32 12.808-8.74 13.122c-7.44.684-13.08-4.912-20.28-9.63c-11.26-7.386-17.62-11.982-28.56-19.188c-12.64-8.328-4.44-12.906 2.76-20.386c1.88-1.958 34.64-31.748 35.26-34.45c.08-.338.16-1.598-.6-2.262c-.74-.666-1.84-.438-2.64-.258c-1.14.256-19.12 12.152-54 35.686c-5.1 3.508-9.72 5.218-13.88 5.128c-4.56-.098-13.36-2.584-19.9-4.708c-8-2.606-14.38-3.984-13.82-8.41c.28-2.304 3.46-4.662 9.52-7.072"/>
+              </svg>
+            </a>
+          </li>
+
+          <!-- Mastodon -->
+          <li>
+            <a href="#" aria-label="Mastodon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                   viewBox="0 0 256 274">
+                <path fill="#3088d4"
+                  d="M249.874 164.085c-3.753 19.307-33.613 40.438-67.908 44.533c-17.883 2.134-35.49 4.095-54.266 3.234c-30.705-1.407-54.933-7.33-54.933-7.33c0 2.99.184 5.836.553 8.498c3.992 30.302 30.047 32.118 54.728 32.964c24.912.852 47.094-6.142 47.094-6.142l1.023 22.521s-17.425 9.357-48.465 11.078c-17.116.94-38.369-.43-63.122-6.983c-53.686-14.21-62.92-71.436-64.332-129.502c-.43-17.24-.165-33.497-.165-47.094c0-59.375 38.903-76.779 38.903-76.779C58.6 4.074 92.259.286 127.25 0h.86c34.991.286 68.673 4.074 88.287 13.083c0 0 38.901 17.404 38.901 76.78c0 0 .488 43.807-5.425 74.222"/>
+                <path fill="#fff"
+                  d="M209.413 94.469v71.894H180.93V96.582c0-14.71-6.19-22.176-18.57-22.176c-13.687 0-20.547 8.857-20.547 26.37v38.195h-28.315v-38.195c0-17.513-6.862-26.37-20.55-26.37c-12.379 0-18.568 7.466-18.568 22.176v69.78H45.897V94.47c0-14.694 3.741-26.37 11.256-35.009c7.75-8.638 17.898-13.066 30.496-13.066c14.575 0 25.613 5.602 32.911 16.808l7.095 11.893l7.096-11.893c7.296-11.206 18.334-16.808 32.911-16.808c12.597 0 22.745 4.428 30.496 13.066c7.513 8.639 11.255 20.315 11.255 35.009"/>
+              </svg>
+            </a>
+          </li>
+
+          <!-- Bluesky -->
+          <li>
+            <a href="#" aria-label="Bluesky">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                   viewBox="0 0 72 72">
+                <path fill="#61b2e4"
+                  d="M19.572 13.903C26.222 18.895 33.374 29.017 36 34.449c2.626-5.432 9.778-15.554 16.428-20.546C57.226 10.301 65 7.513 65 16.383c0 1.77-1.016 14.879-1.611 17.007c-2.07 7.398-9.615 9.285-16.325 8.143c11.73 1.996 14.714 8.609 8.27 15.222c-12.24 12.559-17.591-3.151-18.963-7.177c-.252-.738-.37-1.083-.371-.79c-.002-.293-.12.052-.37.79c-1.372 4.026-6.724 19.736-18.964 7.177c-6.444-6.613-3.46-13.226 8.27-15.222c-6.711 1.142-14.255-.745-16.325-8.143C8.015 31.26 7 18.154 7 16.383c0-8.87 7.774-6.082 12.572-2.48"/>
+              </svg>
+            </a>
+          </li>
+
+        </ul>
+      </section>
+
     </div>
-
-    <!-- Réseaux sociaux -->
-    <ul class="social-link" aria-label="Liens vers réseaux sociaux">
-
-      <!-- Telegram -->
-      <li>
-        <a href="#" aria-label="Telegram">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-               viewBox="0 0 256 256">
-            <defs>
-              <linearGradient id="tg" x1="50%" x2="50%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#2aabee"/>
-                <stop offset="100%" stop-color="#229ed9"/>
-              </linearGradient>
-            </defs>
-            <circle cx="128" cy="128" r="128" fill="url(#tg)"/>
-            <path fill="#fff"
-              d="M57.94 126.648q55.98-24.384 74.64-32.152c35.56-14.786 42.94-17.354 47.76-17.441c1.06-.017 3.42.245 4.96 1.49c1.28 1.05 1.64 2.47 1.82 3.467c.16.996.38 3.266.2 5.038c-1.92 20.24-10.26 69.356-14.5 92.026c-1.78 9.592-5.32 12.808-8.74 13.122c-7.44.684-13.08-4.912-20.28-9.63c-11.26-7.386-17.62-11.982-28.56-19.188c-12.64-8.328-4.44-12.906 2.76-20.386c1.88-1.958 34.64-31.748 35.26-34.45c.08-.338.16-1.598-.6-2.262c-.74-.666-1.84-.438-2.64-.258c-1.14.256-19.12 12.152-54 35.686c-5.1 3.508-9.72 5.218-13.88 5.128c-4.56-.098-13.36-2.584-19.9-4.708c-8-2.606-14.38-3.984-13.82-8.41c.28-2.304 3.46-4.662 9.52-7.072"/>
-          </svg>
-        </a>
-      </li>
-
-      <!-- Mastodon -->
-      <li>
-        <a href="#" aria-label="Mastodon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-               viewBox="0 0 256 274">
-            <path fill="#3088d4"
-              d="M249.874 164.085c-3.753 19.307-33.613 40.438-67.908 44.533c-17.883 2.134-35.49 4.095-54.266 3.234c-30.705-1.407-54.933-7.33-54.933-7.33c0 2.99.184 5.836.553 8.498c3.992 30.302 30.047 32.118 54.728 32.964c24.912.852 47.094-6.142 47.094-6.142l1.023 22.521s-17.425 9.357-48.465 11.078c-17.116.94-38.369-.43-63.122-6.983c-53.686-14.21-62.92-71.436-64.332-129.502c-.43-17.24-.165-33.497-.165-47.094c0-59.375 38.903-76.779 38.903-76.779C58.6 4.074 92.259.286 127.25 0h.86c34.991.286 68.673 4.074 88.287 13.083c0 0 38.901 17.404 38.901 76.78c0 0 .488 43.807-5.425 74.222"/>
-            <path fill="#fff"
-              d="M209.413 94.469v71.894H180.93V96.582c0-14.71-6.19-22.176-18.57-22.176c-13.687 0-20.547 8.857-20.547 26.37v38.195h-28.315v-38.195c0-17.513-6.862-26.37-20.55-26.37c-12.379 0-18.568 7.466-18.568 22.176v69.78H45.897V94.47c0-14.694 3.741-26.37 11.256-35.009c7.75-8.638 17.898-13.066 30.496-13.066c14.575 0 25.613 5.602 32.911 16.808l7.095 11.893l7.096-11.893c7.296-11.206 18.334-16.808 32.911-16.808c12.597 0 22.745 4.428 30.496 13.066c7.513 8.639 11.255 20.315 11.255 35.009"/>
-          </svg>
-        </a>
-      </li>
-
-      <!-- Bluesky -->
-      <li>
-        <a href="#" aria-label="Bluesky">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-               viewBox="0 0 72 72">
-            <path fill="#61b2e4"
-              d="M19.572 13.903C26.222 18.895 33.374 29.017 36 34.449c2.626-5.432 9.778-15.554 16.428-20.546C57.226 10.301 65 7.513 65 16.383c0 1.77-1.016 14.879-1.611 17.007c-2.07 7.398-9.615 9.285-16.325 8.143c11.73 1.996 14.714 8.609 8.27 15.222c-12.24 12.559-17.591-3.151-18.963-7.177c-.252-.738-.37-1.083-.371-.79c-.002-.293-.12.052-.37.79c-1.372 4.026-6.724 19.736-18.964 7.177c-6.444-6.613-3.46-13.226 8.27-15.222c-6.711 1.142-14.255-.745-16.325-8.143C8.015 31.26 7 18.154 7 16.383c0-8.87 7.774-6.082 12.572-2.48"/>
-          </svg>
-        </a>
-      </li>
-
-    </ul>
-
   </main>
 
   <!-- ============================
        FOOTER ULTRA COMPACT
   ============================= -->
-  <footer class="footer">
+  <footer>
+    <div class="footer__container">
 
-    <nav class="footer__nav" aria-label="Liens légaux">
-      <a class="footer__link" href="#">Mentions</a>
-      <span class="footer__sep">•</span>
-      <a class="footer__link" href="#">Confidentialité</a>
-      <span class="footer__sep">•</span>
-      <a class="footer__link" href="#">CGU</a>
-      <span class="footer__sep">•</span>
-      <a class="footer__link" href="#">Cookies</a>
-    </nav>
+      <nav class="footer__nav link" aria-label="Liens légaux">
+        <a class="footer__link link" href="#">Mentions</a>
+        <span class="footer__sep link">•</span>
+        <a class="footer__link link" href="#">Confidentialité</a>
+        <span class="footer__sep link">•</span>
+        <a class="footer__link link" href="#">CGU</a>
+        <span class="footer__sep link">•</span>
+        <a class="footer__link link" href="#">Cookies</a>
+      </nav>
 
-    <p class="footer__copy">&copy; 2025 Aegis Bank</p>
+      <p class="footer__copy">&copy; 2025 Aegis Bank</p>
 
+    </div>
   </footer>
 
 </body>
 </html>
-    

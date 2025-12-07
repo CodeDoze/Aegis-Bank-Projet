@@ -1,8 +1,18 @@
-.link{
-    text-decoration: none;
-    color: var(--color-link);
+.link {
+  text-decoration: none;
+  color: var(--color-link);
+  transition: color 0.2s ease;
 }
+
 .link:hover {
-    color: var(--color-link-hover);
-    transition: color 0.2s ease;
+  color: var(--color-hover);
+}
+
+.link:active {
+  color: var(--color-active);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
