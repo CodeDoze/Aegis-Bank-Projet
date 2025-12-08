@@ -21,23 +21,29 @@
   transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
+/* État : focus-visible pour accessibilité clavier */
+.btn:focus-visible {
+  outline: 2px solid var(--second-primary);
+  outline-offset: 3px;
+}
+
 /* Modificateur : bouton principal avec gradient et ombre */
 .btn--primary {
   background: var(--gradient-primary);
   color: var(--second-color);
-  box-shadow: 0 4px 0 rgba(77, 163, 255, 0.25);
+  box-shadow: 0 8px 0 rgba(77, 163, 255, 0.4), 0 0 20px rgba(77, 163, 255, 0.3);
 }
 
 /* État : hover du bouton principal - Descendance avec transform */
 .btn--primary:hover {
-  transform: translateY(1px);
-  box-shadow: 0 2px 0 rgba(77, 163, 255, 0.25);
+  transform: translateY(2px);
+  box-shadow: 0 6px 0 rgba(77, 163, 255, 0.4), 0 0 25px rgba(77, 163, 255, 0.4);
 }
 
 /* État : active du bouton principal - Pression enfoncée */
 .btn--primary:active {
-  transform: translateY(2px);
-  box-shadow: 0 0 0 var(--color-active);
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 rgba(77, 163, 255, 0.5), 0 0 15px rgba(77, 163, 255, 0.5);
 }
 
 /* Modificateur : bouton ghost (transparent, bordure) */
@@ -45,11 +51,13 @@
   background: transparent;
   color: var(--color-link);
   border: 1px solid rgba(165, 200, 255, 0.4);
+  box-shadow: 0 0 12px rgba(255, 107, 107, 0.25);
 }
 
 /* État : hover du bouton ghost */
 .btn--ghost:hover {
   background: rgba(77, 163, 255, 0.08);
+  box-shadow: 0 0 16px rgba(255, 107, 107, 0.4);
 }
 
 /* Modificateur : bouton de taille large */

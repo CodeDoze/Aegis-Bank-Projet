@@ -1,7 +1,7 @@
 /* ============================
    IMPORT VARIABLES
 ============================ */
-@import url("../styles/all-variables.css");
+@import url("./styles/all-variables.css");
 
 /* ============================
    RESET GLOBAL
@@ -74,6 +74,12 @@ header {
   font-size: var(--font-size-link-sm);
   text-decoration: none;
   white-space: nowrap;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+/* État : hover sur les liens header */
+.header__link:hover {
+  color: var(--color-hover);
 }
 
 /* Élément : bouton menu hamburger */
@@ -235,6 +241,7 @@ footer {
   color: var(--color-primary);
   text-decoration: none;
   white-space: nowrap;
+  transition: color 0.2s ease;
 }
 
 /* État : hover sur lien légal */
