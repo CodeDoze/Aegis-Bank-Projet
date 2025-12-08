@@ -1,0 +1,263 @@
+/* ============================
+   IMPORT VARIABLES
+============================ */
+@import url("../styles/all-variables.css");
+
+/* ============================
+   RESET GLOBAL
+============================ */
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100dvh;         /* Zéro scroll mobile */
+  overflow: hidden;
+  font-size: 62.5%;       /* 1rem = 10px */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--bg-gradient);
+  /* background-image: url(./resources/img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; */
+}
+
+/* ============================
+   HEADER - Entête navigation
+============================ */
+
+/* Balise sémantique header */
+header {
+  height: var(--header-height);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Bloc : conteneur principal du header */
+.header__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--padding-md);
+}
+
+/* Élément : logo de l'application */
+.header__logo {
+  font-family: var(--font-main);
+  font-size: var(--font-size-logo);
+  font-weight: bold;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* Élément : groupe de boutons action (connexion/inscription) */
+.header__actions {
+  display: flex;
+  gap: var(--gap-md);
+  margin-left: var(--gap-lg);
+}
+
+/* Élément : lien bouton dans le header */
+.header__link {
+  font-size: var(--font-size-link-sm);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Élément : bouton menu hamburger */
+.header__burger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: var(--gap-sm);
+  display: flex;
+  align-items: center;
+}
+
+/* Enfant du burger : SVG de l'icône */
+.header__burger svg {
+  color: var(--color-text);
+}
+
+/* ============================
+   MAIN - Section centrale avec contenu principal
+============================ */
+
+/* Balise sémantique main - Flex container pour centrage */
+main {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bloc : conteneur du contenu principal avec animation fade-in-up */
+.main__container {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--padding-main-y) var(--padding-md) 0;
+  gap: var(--gap-lg);
+  animation: fade-in-up 0.6s ease-out; /* Micro-interaction 2 */
+}
+
+/* Élément : titre principal H1 en Orbitron */
+.main__title {
+  font-family: var(--font-main);
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: var(--margin-md);
+  color: var(--second-primary);
+}
+
+/* Élément : sous-titre / tagline */
+.main__tagline {
+  font-family: var(--font-main);
+  font-size: var(--font-size-tagline);
+  line-height: var(--line-height-base);
+  opacity: 0.9;
+  margin: 0;
+  margin-bottom: var(--margin-lg);
+}
+
+/* ============================
+   CARD PROMO - Carte de promotion avec offre
+============================ */
+
+/* Bloc : carte promotionnelle avec flottement */
+.card-promo {
+  background: var(--bg-card);
+  padding: var(--padding-card-y) var(--padding-card-x);
+  border-radius: var(--radius-md);
+  max-width: 26rem;
+  margin-bottom: var(--margin-md);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  animation: float-card 4s ease-in-out infinite; /* Micro-interaction 3 */
+}
+
+/* Élément : texte de promotion dans la card */
+.card-promo__text {
+  font-size: var(--font-size-tagline);
+  margin: 0 0 var(--margin-md) 0;
+}
+
+/* Élément : wrapper du bouton CTA télécharger */
+.card-promo__btn-wrapper {
+  display: inline-block;
+}
+
+/* ============================
+   RÉSEAUX SOCIAUX - Icônes des réseaux sociaux
+============================ */
+
+/* Bloc : liste de liens vers réseaux sociaux */
+.social-links {
+  display: flex;
+  gap: var(--gap-md);
+  margin-top: var(--margin-sm);
+  padding: 0;
+  list-style: none;
+}
+
+/* Élément : item de la liste (li) */
+.social-links__item {
+  display: inline-flex;
+}
+
+/* Élément : lien vers réseau social avec animation de pulse */
+.social-links__link {
+  display: inline-flex;
+  transition: transform 0.2s ease;
+  animation: pulse-soft 3s ease-in-out infinite;               /* Micro-interaction 1 */
+}
+
+/* État : hover sur le lien social */
+.social-links__link:hover {
+  transform: scale(1.15); /* Hover prioritaire sur animation pulse */
+}
+
+/* ============================
+   FOOTER - Pied de page avec liens légaux
+============================ */
+
+/* Balise sémantique footer */
+footer {
+  height: var(--footer-height);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  padding: 0 var(--padding-sm);
+}
+
+/* Bloc : conteneur principal du footer */
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Élément : navigation des liens légaux */
+.footer__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-xs);
+  margin-bottom: var(--margin-xs);
+}
+
+/* Élément : lien légal individual */
+.footer__link {
+  font-size: var(--font-size-footer);
+  color: var(--color-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* État : hover sur lien légal */
+.footer__link:hover {
+  color: var(--color-primary-hover);
+}
+
+/* État : focus-visible pour accessibilité */
+.footer__link:focus-visible {
+  outline: 2px solid var(--second-primary);
+  outline-offset: 3px;
+}
+
+/* Élément : séparateur visuel entre liens */
+.footer__sep {
+  font-size: var(--font-size-footer);
+  opacity: 0.6;
+}
+
+/* Élément : copyright/mentions légales */
+.footer__copy {
+  font-size: var(--font-size-footer);
+  opacity: 0.7;
+  margin: 0;
+}
+

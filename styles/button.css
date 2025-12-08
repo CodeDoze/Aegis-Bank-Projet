@@ -1,0 +1,58 @@
+/* ============================
+   COMPOSANT BOUTON - Système de boutons réutilisable
+============================ */
+
+/* Bloc : classe de base pour tous les boutons */
+.btn {
+  font-family: var(--font-body);
+  font-size: var(--font-size-btn);
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Modificateur : bouton principal avec gradient et ombre */
+.btn--primary {
+  background: var(--gradient-primary);
+  color: var(--second-color);
+  box-shadow: 0 4px 0 rgba(77, 163, 255, 0.25);
+}
+
+/* État : hover du bouton principal - Descendance avec transform */
+.btn--primary:hover {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 rgba(77, 163, 255, 0.25);
+}
+
+/* État : active du bouton principal - Pression enfoncée */
+.btn--primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 var(--color-active);
+}
+
+/* Modificateur : bouton ghost (transparent, bordure) */
+.btn--ghost {
+  background: transparent;
+  color: var(--color-link);
+  border: 1px solid rgba(165, 200, 255, 0.4);
+}
+
+/* État : hover du bouton ghost */
+.btn--ghost:hover {
+  background: rgba(77, 163, 255, 0.08);
+}
+
+/* Modificateur : bouton de taille large */
+.btn--lg {
+  padding: 1rem 2.4rem;
+}

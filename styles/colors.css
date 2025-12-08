@@ -1,0 +1,23 @@
+:root {
+  --bg-color: #05042d;
+  --bg-card: rgba(255, 255, 255, 0.08);
+
+  --color-text: #ffffff;
+  --color-text-secondary: #e0e0e0;
+
+  --color-primary: #4da3ff;
+  --color-primary-hover: #1c7ed6;
+
+  --second-primary: #ff6b6b;
+  --second-color: #ffffff;
+
+  --color-link: #a5c8ff;
+  --color-hover: #4da3ff;
+  --color-active: #1c7ed6;
+
+  --border-color: rgba(255, 255, 255, 0.15);
+
+  /* Dégradé premium */
+  --gradient-primary: linear-gradient(135deg, #4da3ff, #1c7ed6);
+  --bg-gradient: radial-gradient(circle at top,#151a4a 0%,    #05042d 50%,#020012 100%);
+}

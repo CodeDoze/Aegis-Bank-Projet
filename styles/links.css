@@ -1,0 +1,26 @@
+/* ============================
+   COMPOSANT LINK - Styles pour les liens texte
+============================ */
+
+/* Bloc : lien standard */
+.link {
+  text-decoration: none;
+  color: var(--color-link);
+  transition: color 0.2s ease;
+}
+
+/* État : hover sur le lien */
+.link:hover {
+  color: var(--color-hover);
+}
+
+/* État : active (clic) sur le lien */
+.link:active {
+  color: var(--color-active);
+}
+
+/* État : focus-visible pour accessibilité clavier */
+.link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}

@@ -1,0 +1,33 @@
+:root {
+  /* Hauteurs fixes */
+  --header-height: 5.5rem;
+  --footer-height: 4.5rem;
+
+  /* Radius */
+  --radius-sm: 0.8rem;
+  --radius-md: 1.2rem;
+  --radius-lg: 2rem;
+
+  /* Gaps */
+  --gap-xs: 0.4rem;
+  --gap-sm: 0.8rem;
+  --gap-md: 1.2rem;
+  --gap-lg: 1.8rem;
+
+  /* Paddings */
+  --padding-xs: 0.4rem;
+  --padding-sm: 0.8rem;
+  --padding-md: 1.6rem;
+  --padding-lg: 2.4rem;
+
+  /* Marges */
+  --margin-xs: 0.3rem;
+  --margin-sm: 0.5rem;
+  --margin-md: 0.8rem;
+  --margin-lg: 2rem;
+
+  /* Spacing spécifiques */
+  --padding-main-y: clamp(2.4rem, 5vh, 4rem);
+  --padding-card-y: clamp(1.6rem, 4vh, 2.4rem);
+  --padding-card-x: clamp(1.6rem, 6vw, 3.2rem);
+}

@@ -1,0 +1,9 @@
+/* ============================
+   LAYOUT GLOBAL
+============================ */
+
+.container {
+  width: min(120rem, 100%);
+  margin: 0 auto;
+  padding: 0 var(--padding-md);
+}
