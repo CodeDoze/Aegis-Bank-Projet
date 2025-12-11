@@ -48,16 +48,24 @@
 
 /* Modificateur : bouton ghost (transparent, bordure) */
 .btn--ghost {
-  background: transparent;
+  background: rgba(165, 200, 255, 0.15);
   color: var(--color-link);
-  border: 1px solid rgba(165, 200, 255, 0.4);
-  box-shadow: 0 0 12px rgba(255, 107, 107, 0.25);
+  border: 2px solid rgba(165, 200, 255, 0.6);
+  box-shadow: 0 4px 0 rgba(165, 200, 255, 0.3), 0 0 15px rgba(165, 200, 255, 0.2);
+  padding: 0.8rem 2rem;
 }
 
 /* État : hover du bouton ghost */
 .btn--ghost:hover {
-  background: rgba(77, 163, 255, 0.08);
-  box-shadow: 0 0 16px rgba(255, 107, 107, 0.4);
+  background: rgba(165, 200, 255, 0.25);
+  box-shadow: 0 4px 0 rgba(165, 200, 255, 0.4), 0 0 20px rgba(165, 200, 255, 0.3);
+  transform: translateY(1px);
+}
+
+/* État : active du bouton ghost */
+.btn--ghost:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 rgba(165, 200, 255, 0.4), 0 0 12px rgba(165, 200, 255, 0.3);
 }
 
 /* Modificateur : bouton de taille large */
