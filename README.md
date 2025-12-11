@@ -36,8 +36,12 @@ Contrainte technique principale : créer une expérience mobile complète sans d
 ## Architecture du Projet
 
 ```
-index.html (142 lignes)     → Structure HTML sémantique
+index.html (159 lignes)     → Structure HTML sémantique
 style.css (271 lignes)      → CSS principal avec imports
+│
+├── resources/              → Assets du projet
+│   ├── font/               → Police Orbitron locale
+│   └── img/                → Images et favicon.svg
 │
 └── styles/                 → Modules CSS organisés
     ├── all-variables.css   → Point d'entrée des variables
@@ -54,20 +58,29 @@ style.css (271 lignes)      → CSS principal avec imports
 
 ### Header
 - Logo Aegis Bank
-- 2 boutons CTA : "Se connecter" / "S'inscrire"
+- 2 boutons CTA stylisés : "Se connecter" / "S'inscrire" (effet 3D)
 - Menu burger SVG (visuel, non fonctionnel)
 
 ### Hero Section
 - Titre H1 : "La néobanque éthique & transparente"
 - Sous-titre motivant (< 140 caractères)
 - Card promotionnelle : "20€ offerts - Mars 2026"
-- CTA principal : "Télécharger l'app"
+- CTA principal : "Télécharger l'app" (gradient bleu + effet 3D)
 - 3 icônes réseaux sociaux SVG : Telegram, Mastodon, BlueSky
 
 ### Footer
 - 3 liens légaux : Mentions • Confidentialité • CGU
 - Copyright : "© 2025 Aegis Bank"
 - Position fixe, hauteur optimisée
+
+## Points Bonus Implémentés
+
+- ✅ **Favicon SVG** personnalisé (logo "A" avec gradient Aegis Bank)
+- ✅ **Open Graph tags** pour partage sur réseaux sociaux (Facebook, Twitter, LinkedIn)
+- ✅ **Titre SEO optimisé** avec mots-clés pertinents
+- ✅ **Boutons header 3D** avec effet de descente au clic
+- ✅ **Architecture SOLID** avec 8 fichiers CSS séparés
+- ✅ **Commentaires détaillés** dans tout le code
 
 ## Méthodologie BEM
 
