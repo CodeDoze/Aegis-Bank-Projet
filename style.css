@@ -99,7 +99,7 @@ header {
 }
 
 /* ============================
-   MAIN - Section centrale avec contenu principal
+   HERO - Section centrale avec contenu principal
 ============================ */
 
 /* Balise sémantique main - Flex container pour centrage */
@@ -112,8 +112,8 @@ main {
   align-items: center;
 }
 
-/* Bloc : conteneur du contenu principal avec animation fade-in-up */
-.main__container {
+/* Bloc : conteneur du hero avec animation fade-in-up */
+.hero__container {
   flex: 1;
   min-height: 0;
   display: flex;
@@ -126,7 +126,7 @@ main {
 }
 
 /* Élément : titre principal H1 en Orbitron */
-.main__title {
+.hero__title {
   font-family: var(--font-main);
   font-size: var(--font-size-title);
   font-weight: 700;
@@ -136,7 +136,7 @@ main {
 }
 
 /* Élément : sous-titre / tagline */
-.main__tagline {
+.hero__tagline {
   font-family: var(--font-main);
   font-size: var(--font-size-tagline);
   line-height: var(--line-height-base);
@@ -225,8 +225,8 @@ footer {
   align-items: center;
 }
 
-/* Élément : navigation des liens légaux */
-.footer__nav {
+/* Élément : groupe de liens légaux */
+.footer__links {
   display: flex;
   flex-direction: row;
   justify-content: center;

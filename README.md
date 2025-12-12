@@ -119,7 +119,7 @@ Organisation stricte des classes CSS selon la convention Block Element Modifier 
   to { opacity: 1; transform: translateY(0); }
 }
 ```
-Appliquée sur `.main__container` au chargement (durée : 0.6s)
+Appliquée sur `.hero__container` au chargement (durée : 0.6s)
 
 ### 2. float-card (Micro-interaction)
 ```css
