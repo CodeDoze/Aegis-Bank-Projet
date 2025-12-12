@@ -193,13 +193,13 @@ main {
 /* Élément : lien vers réseau social avec animation de pulse */
 .social-links__link {
   display: inline-flex;
-  transition: transform 0.2s ease;
+  transition: filter 0.3s ease;
   animation: pulse-soft 3s ease-in-out infinite;               /* Micro-interaction 1 */
 }
 
-/* État : hover sur le lien social */
+/* État : hover sur le lien social - effet de luminosité intense en gardant pulse */
 .social-links__link:hover {
-  transform: scale(1.15); /* Hover prioritaire sur animation pulse */
+  filter: brightness(1.5) drop-shadow(0 0 15px rgba(165, 200, 255, 0.9));
 }
 
 /* ============================
